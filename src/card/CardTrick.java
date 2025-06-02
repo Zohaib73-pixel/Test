@@ -73,12 +73,16 @@ public class CardTrick {
 
         //After pushing and commiting changes result code
         
+
+        //insert code to ask the user for Card value and suit, create their card
+        // and search magicHand here
+        //Then report the result here
+        // add one luckcard hard code 2,clubs
         if (found) {
             System.out.println("Congrat! Your card is  the Lucky Card!");
         } else {
             System.out.println("Sorry, Your card was not a Lucky Card.");
         }
         System.out.println("\nYour card: " + luckyCard.getSuit());
-
     }
 }
