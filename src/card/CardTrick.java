@@ -56,6 +56,29 @@ public class CardTrick {
             System.out.println("Sorry, Your card was not a magic card.");
         }
         System.out.println("\nYour card: " + choosenCard.getSuit());
+        
+        // Adding one lucky card: 2 of Clubs
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Clubs");
+        System.out.println("\n(Lucky card was: " + luckyCard.getSuit() + ")");
+
+        for (Card card : magicHand) {
+            if (card.getValue() == luckyCard.getValue() &&
+                card.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
+                found = true;
+                break;
+            }
+        }
+
+        //After pushing and commiting changes result code
+        
+        if (found) {
+            System.out.println("Congrat! Your card is  the Lucky Card!");
+        } else {
+            System.out.println("Sorry, Your card was not a Lucky Card.");
+        }
+        System.out.println("\nYour card: " + luckyCard.getSuit());
 
     }
 }
